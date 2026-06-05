@@ -1,0 +1,335 @@
+[
+  {
+    "target_name": "SITL",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates && git submodule update --init -- src/config && make configs",
+    "build_cmd": "make SITL",
+    "elf": "obj/main/betaflight_SITL.elf",
+    "ld": "src/platform/SIMULATOR/link/sitl.ld",
+    "map_file": "obj/main/betaflight_SITL.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "SITL_X_PLANE",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates && git submodule update --init -- src/config && make configs",
+    "build_cmd": "make SITL_X_PLANE",
+    "elf": "obj/main/betaflight_SITL_SITL_X_PLANE.elf",
+    "ld": "src/platform/SIMULATOR/link/sitl.ld",
+    "map_file": "obj/main/betaflight_SITL_SITL_X_PLANE.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32F405",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32F405",
+    "elf": "obj/main/betaflight_STM32F405.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f405.ld",
+    "map_file": "obj/main/betaflight_STM32F405.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32F411",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32F411",
+    "elf": "obj/main/betaflight_STM32F411.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f411.ld",
+    "map_file": "obj/main/betaflight_STM32F411.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32F446",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32F446",
+    "elf": "obj/main/betaflight_STM32F446.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f446.ld",
+    "map_file": "obj/main/betaflight_STM32F446.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32F745",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32F745",
+    "elf": "obj/main/betaflight_STM32F745.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f74x.ld",
+    "map_file": "obj/main/betaflight_STM32F745.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32F7X2",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32F7X2",
+    "elf": "obj/main/betaflight_STM32F7X2.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f722.ld",
+    "map_file": "obj/main/betaflight_STM32F7X2.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32G47X",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32G47X",
+    "elf": "obj/main/betaflight_STM32G47X.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_g474.ld",
+    "map_file": "obj/main/betaflight_STM32G47X.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H723",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H723",
+    "elf": "obj/main/betaflight_STM32H723.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h723_1m.ld",
+    "map_file": "obj/main/betaflight_STM32H723.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H725",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H725",
+    "elf": "obj/main/betaflight_STM32H725.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h723_1m.ld",
+    "map_file": "obj/main/betaflight_STM32H725.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H730",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H730",
+    "elf": "obj/main/betaflight_STM32H730.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h730_128m.ld",
+    "map_file": "obj/main/betaflight_STM32H730.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H735",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H735",
+    "elf": "obj/main/betaflight_STM32H735.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h735_1m.ld",
+    "map_file": "obj/main/betaflight_STM32H735.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H743",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H743",
+    "elf": "obj/main/betaflight_STM32H743.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h743_2m.ld",
+    "map_file": "obj/main/betaflight_STM32H743.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H750",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H750",
+    "elf": "obj/main/betaflight_STM32H750.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h750_1m.ld",
+    "map_file": "obj/main/betaflight_STM32H750.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32H757",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32H757",
+    "elf": "obj/main/betaflight_STM32H757.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_h757_m7.ld",
+    "map_file": "obj/main/betaflight_STM32H757.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32C562",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=stm32c5 platform-sdk-hydrate && make SDK=stm32c5 platform-tools-install",
+    "build_cmd": "make STM32C562",
+    "elf": "obj/main/betaflight_STM32C562.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_c562_512k.ld",
+    "map_file": "obj/main/betaflight_STM32C562.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32C5A3",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=stm32c5 platform-sdk-hydrate && make SDK=stm32c5 platform-tools-install",
+    "build_cmd": "make STM32C5A3",
+    "elf": "obj/main/betaflight_STM32C5A3.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_c5xx_1m.ld",
+    "map_file": "obj/main/betaflight_STM32C5A3.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32N657",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=stm32n6 platform-sdk-hydrate && make SDK=stm32n6 platform-tools-install",
+    "build_cmd": "make STM32N657",
+    "elf": "obj/main/betaflight_STM32N657.elf",
+    "ld": "src/platform/STM32/link/STM32N657XX_LRUN.ld",
+    "map_file": "obj/main/betaflight_STM32N657.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "APM32F405",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=apm32f4 platform-sdk-hydrate && make SDK=apm32f4 platform-tools-install",
+    "build_cmd": "make APM32F405",
+    "elf": "obj/main/betaflight_APM32F405.elf",
+    "ld": "src/platform/APM32/link/apm32_flash_f405.ld",
+    "map_file": "obj/main/betaflight_APM32F405.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "APM32F407",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=apm32f4 platform-sdk-hydrate && make SDK=apm32f4 platform-tools-install",
+    "build_cmd": "make APM32F407",
+    "elf": "obj/main/betaflight_APM32F407.elf",
+    "ld": "src/platform/APM32/link/apm32_flash_f407.ld",
+    "map_file": "obj/main/betaflight_APM32F407.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "APM32F425",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=apm32f4 platform-sdk-hydrate && make SDK=apm32f4 platform-tools-install",
+    "build_cmd": "make APM32F425",
+    "elf": "obj/main/betaflight_APM32F425.elf",
+    "ld": "src/platform/APM32/link/apm32_flash_f425.ld",
+    "map_file": "obj/main/betaflight_APM32F425.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "APM32F427",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=apm32f4 platform-sdk-hydrate && make SDK=apm32f4 platform-tools-install",
+    "build_cmd": "make APM32F427",
+    "elf": "obj/main/betaflight_APM32F427.elf",
+    "ld": "src/platform/APM32/link/apm32_flash_f427.ld",
+    "map_file": "obj/main/betaflight_APM32F427.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "AT32F435G",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make AT32F435G",
+    "elf": "obj/main/betaflight_AT32F435G.elf",
+    "ld": "src/platform/AT32/link/at32_flash_f43xg.ld",
+    "map_file": "obj/main/betaflight_AT32F435G.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "AT32F435M",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make AT32F435M",
+    "elf": "obj/main/betaflight_AT32F435M.elf",
+    "ld": "src/platform/AT32/link/at32_flash_f43xm.ld",
+    "map_file": "obj/main/betaflight_AT32F435M.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "RP2350A",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl cmake && git submodule update --init -- src/config && make configs && make SDK=pico_sdk platform-sdk-hydrate && make SDK=pico_sdk platform-tools-install",
+    "build_cmd": "make RP2350A",
+    "elf": "obj/main/betaflight_RP2350A.elf",
+    "ld": "src/platform/PICO/link/pico_flash_mem_defaults.ld src/platform/PICO/link/pico_rp2350_RunFromFLASH.ld",
+    "map_file": "obj/main/betaflight_RP2350A.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "RP2350B",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl cmake && git submodule update --init -- src/config && make configs && make SDK=pico_sdk platform-sdk-hydrate && make SDK=pico_sdk platform-tools-install",
+    "build_cmd": "make RP2350B",
+    "elf": "obj/main/betaflight_RP2350B.elf",
+    "ld": "src/platform/PICO/link/pico_flash_mem_defaults.ld src/platform/PICO/link/pico_rp2350_RunFromFLASH.ld",
+    "map_file": "obj/main/betaflight_RP2350B.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "X32M7B",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=x32m7 platform-sdk-hydrate && make SDK=x32m7 platform-tools-install",
+    "build_cmd": "make X32M7B",
+    "elf": "obj/main/betaflight_X32M7B.elf",
+    "ld": "src/platform/X32/link/x32_flash_m7b_2m.ld",
+    "map_file": "obj/main/betaflight_X32M7B.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "AIRBOTG4AIO",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make AIRBOTG4AIO",
+    "elf": "obj/main/betaflight_STM32G47X_AIRBOTG4AIO.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_g474.ld",
+    "map_file": "obj/main/betaflight_STM32G47X_AIRBOTG4AIO.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "CRAZYBEEF4FR",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make CRAZYBEEF4FR",
+    "elf": "obj/main/betaflight_STM32F411_CRAZYBEEF4FR.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f411.ld",
+    "map_file": "obj/main/betaflight_STM32F411_CRAZYBEEF4FR.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "CRAZYBEEF4SX1280",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make CRAZYBEEF4SX1280",
+    "elf": "obj/main/betaflight_STM32F411_CRAZYBEEF4SX1280.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f411.ld",
+    "map_file": "obj/main/betaflight_STM32F411_CRAZYBEEF4SX1280.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "IFLIGHT_BLITZ_F722",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make IFLIGHT_BLITZ_F722",
+    "elf": "obj/main/betaflight_STM32F7X2_IFLIGHT_BLITZ_F722.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f722.ld",
+    "map_file": "obj/main/betaflight_STM32F7X2_IFLIGHT_BLITZ_F722.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "MATEKF405TE",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make MATEKF405TE",
+    "elf": "obj/main/betaflight_STM32F405_MATEKF405TE.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f405.ld",
+    "map_file": "obj/main/betaflight_STM32F405_MATEKF405TE.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "NUCLEOF446",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make NUCLEOF446",
+    "elf": "obj/main/betaflight_STM32F446_NUCLEOF446.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f446.ld",
+    "map_file": "obj/main/betaflight_STM32F446_NUCLEOF446.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "SPRACINGH7EXTREME",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make SPRACINGH7EXTREME",
+    "elf": "obj/main/betaflight_STM32H750_SPRACINGH7EXTREME.elf",
+    "ld": "src/platform/STM32/link/stm32_ram_h750_exst.ld",
+    "map_file": "obj/main/betaflight_STM32H750_SPRACINGH7EXTREME.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "SPRACINGH7RF",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make SPRACINGH7RF",
+    "elf": "obj/main/betaflight_STM32H730_SPRACINGH7RF.elf",
+    "ld": "src/platform/STM32/link/stm32_ram_h730_exst.ld src/platform/STM32/link/stm32_h730_common.ld src/platform/STM32/link/stm32_h730_common_post.ld",
+    "map_file": "obj/main/betaflight_STM32H730_SPRACINGH7RF.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "STM32F4DISCOVERY",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make STM32F4DISCOVERY",
+    "elf": "obj/main/betaflight_STM32F405_STM32F4DISCOVERY.elf",
+    "ld": "src/platform/STM32/link/stm32_flash_f405.ld",
+    "map_file": "obj/main/betaflight_STM32F405_STM32F4DISCOVERY.map",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "TBS_LUCID_FC",
+    "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
+    "build_cmd": "make TBS_LUCID_FC",
+    "elf": "obj/main/betaflight_AT32F435M_TBS_LUCID_FC.elf",
+    "ld": "src/platform/AT32/link/at32_flash_f43xm.ld",
+    "map_file": "obj/main/betaflight_AT32F435M_TBS_LUCID_FC.map",
+    "linker_vars": ""
+  }
+]
