@@ -14,7 +14,7 @@
     "build_cmd": "make SITL_X_PLANE",
     "elf": "obj/main/betaflight_SITL_SITL_X_PLANE.elf",
     "ld": "src/platform/SIMULATOR/link/sitl.ld",
-    "map_file": "obj/main/betaflight_SITL_SITL_X_PLANE.map",
+    "map_file": "obj/main/betaflight_SITL_X_PLANE.map",
     "linker_vars": ""
   },
   {
@@ -94,7 +94,7 @@
     "setup_cmd": "sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends build-essential git ca-certificates curl && git submodule update --init -- src/config && make configs && make SDK=arm platform-tools-install",
     "build_cmd": "make STM32H730",
     "elf": "obj/main/betaflight_STM32H730.elf",
-    "ld": "src/platform/STM32/link/stm32_flash_h730_128m.ld",
+    "ld": "src/platform/STM32/link/stm32_ram_h730_exst.ld src/platform/STM32/link/stm32_h730_common.ld src/platform/STM32/link/stm32_h730_common_post.ld",
     "map_file": "obj/main/betaflight_STM32H730.map",
     "linker_vars": ""
   },
