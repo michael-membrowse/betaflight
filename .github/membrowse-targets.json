@@ -14,7 +14,7 @@
     "build_cmd": "make SITL_X_PLANE",
     "elf": "obj/main/betaflight_SITL_SITL_X_PLANE.elf",
     "ld": "src/platform/SIMULATOR/link/sitl.ld",
-    "map_file": "obj/main/betaflight_SITL_X_PLANE.map",
+    "map_file": "obj/main/betaflight_SITL.map",
     "linker_vars": ""
   },
   {
