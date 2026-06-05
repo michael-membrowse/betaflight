@@ -37,11 +37,20 @@ jobs:
           fetch-depth: 0
           submodules: recursive
 
+      # Install toolchains outside the repo checkout. The onboard action runs
+      # `git clean -fdx` between commits, which deletes gitignored files such as
+      # betaflight's in-tree tools/ dir. Redirecting TOOLS_DIR to a path outside
+      # the workspace keeps the ARM SDK alive across commits so builds don't
+      # fail with "arm-none-eabi-gcc not found" and upload empty reports.
       - name: Install packages
+        env:
+          TOOLS_DIR: ${{ runner.temp }}/bf-tools
         run: ${{ matrix.setup_cmd }}
 
       - name: Run MemBrowse Onboard Action
         uses: membrowse/membrowse-action/onboard-action@v1
+        env:
+          TOOLS_DIR: ${{ runner.temp }}/bf-tools
         with:
           target_name: ${{ matrix.target_name }}
           num_commits: ${{ github.event.inputs.num_commits }}
